@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Vetores</title>
+</head>
+<body onload="exibir()">
+     <script>
+          function exibir(){
+               let montadora = new Array(
+                    "Fiat", "Ford", "General Motors",
+                    "Honda", "Nissan", "Volkswagen"
+               );
+               document.writeln("<h1>Montadoras</h1>")
+               montadora.forEach(montadora => {
+                    document.writeln(montadora + "<br>");
+               });
+          }
+     </script>
+</body>
+</html>

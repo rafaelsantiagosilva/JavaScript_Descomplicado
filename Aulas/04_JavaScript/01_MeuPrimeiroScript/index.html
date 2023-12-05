@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Meu Primeiro Script</title>
+</head>
+
+<body onload="iniciar()">
+     <h1>oi</h1>
+     <script>
+          function iniciar() {
+               // Pegando o texto da tag title
+               document.write("<h1>" + document.title + "</h1>");
+
+               document.write("Olá pessoal! <br>");
+
+               // Dizendo qual é o navegador
+               document.write(`Você está utilizando o navegador ${navigator.appName} na versão ${navigator.appVersion}`)
+          }
+     </script>
+</body>
+
+</html>
