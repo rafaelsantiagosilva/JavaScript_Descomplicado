@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>Imagens</title>
 </head>
+
 <body>
+     <h1>Imagens</h1>
+     <img src="./images/lampada_acesa.png" id="lampada">
+
      <script>
+          var lampada = document.getElementById('lampada');
+          lampada.addEventListener('mouseenter', () => {
+               lampada.setAttribute('src', './images/lampada_acesa.png');
+          })
+
+          lampada.addEventListener('mouseout', () => {
+               lampada.setAttribute('src', './images/lampada_apagada.png');
+          })
      </script>
 </body>
+
 </html>
