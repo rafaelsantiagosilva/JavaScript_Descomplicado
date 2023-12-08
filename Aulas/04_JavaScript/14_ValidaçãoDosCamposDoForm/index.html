@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Produto</title>
+</head>
+
+<body>
+     <h1>Produto</h1>
+     <table border="0">
+          <tr>
+               <td align="right">Descrição:</td>
+
+               <!-- "onblur" é para quando o cursor do mouse sai do campo referido -->
+               <td><input type="text" name="desc" id="desc" value="" size="20" maxlength="20"
+                         onblur="validarDescricao()"></td>
+          </tr>
+
+          <tr>
+               <td align="right">Quantidade:</td>
+               <td><input type="text" name="qtd" id="qtd" value="" size="3" maxlength="3" onblur="validarQuantidade()">
+               </td>
+          </tr>
+
+          <tr>
+               <td align="right">Preço Unitário:</td>
+               <td><input type="text" name="unit" id="unit" value="" size="10" maxlength="10" onblur="validarPreco()">
+               </td>
+          </tr>
+
+          <tr>
+               <td colspan="2"><input type="submit" value="Calcular" onclick="calcular()"></td>
+          </tr>
+
+          <tr>
+               <td align="right">Preço Total: </td>
+               <td><input type="text" name="total" id="total" value="" size="10" readonly></td>
+          </tr>
+     </table>
+
+     <script type="text/javascript">
+          function validarDescricao() {
+               let desc = document.getElementById('desc');
+
+               // "trim()" desconsidera os espaços em branco
+               if (desc.value.trim() === "") {
+                    desc.style.background = "yellow";
+                    alert("Preencha a descrição do produto!");
+                    return false;
+               } else {
+                    desc.style.background = "white";
+                    return true;
+               }
+          }
+
+          function validarQuantidade() {
+               let qtd = document.getElementById('qtd');
+               let erro = false;
+
+               if (qtd.value.trim() === "") {
+                    erro = true;
+               } else {
+                    if (isNaN(qtd.value)) {
+                         erro = true
+                    } else {
+                         let n_qtd = parseInt(qtd.value);
+                         if (n_qtd < 1 || n_qtd > 999) {
+                              erro = true;
+                         }
+                    }
+               }
+
+               if (erro) {
+                    qtd.style.background = "yellow";
+                    alert("A quantidade deve ser um número entre 1 e 999!")
+               } else {
+                    qtd.style.background = "white";
+               }
+
+               return !erro;
+          }
+
+          function validarPreco() {
+               let unit = document.getElementById('unit');
+               let erro = false;
+
+               if (unit.value.trim() === "") {
+                    erro = true;
+               } else {
+                    if (isNaN(unit.value)) {
+                         erro = true;
+                    } else {
+                         let n_unit = parseFloat(unit.value);
+
+                         if (n_unit <= 0.0) {
+                              erro = true;
+                         } else {
+                              unit.value = n_unit.toFixed(2);
+                         }
+                    }
+               }
+
+               if (erro) {
+                    unit.style.background = "yellow";
+                    alert("O preço unitário deve seer um número maior que zero!");
+               } else {
+                    unit.style.background = "white";
+               }
+
+               return !erro;
+          }
+
+          function calcular(){
+               if(validarDescricao() && validarPreco() && validarQuantidade()){
+                    let total = document.getElementById('total');
+                    let n_total = parseFloat(unit.value) * parseInt(qtd.value);
+                    total.value = n_total.toFixed(2);
+               }
+          }
+     </script>
+</body>
+
+</html>
