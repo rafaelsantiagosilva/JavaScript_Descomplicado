@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Calculadora Simples</title>
+</head>
+
+<body>
+     <h1>Calculadora Básica</h1>
+     <main>
+          <label for="v1">Valor 1:</label>
+          <input type="text" name="v1" id="v1" value="0">
+          <br>
+          <label for="v2">Valor 2:</label>
+          <input type="text" name="v2" id="v2" value="0">
+          <br>
+          <label for="somar">Somar</label>
+          <input type="radio" name="op" id="somar">
+          <br>
+          <label for="subtrair">Subtrair</label>
+          <input type="radio" name="op" id="subtrair">
+          <br>
+          <label for="multiplicar">Multiplicar</label>
+          <input type="radio" name="op" id="multiplicar">
+          <br>
+          <label for="dividir">Dividir</label>
+          <input type="radio" name="op" id="dividir">
+          <br>
+          <input type="button" value="Calcular" onclick="calcular()">
+          <br>
+          <p>Resultado: <input type="text" name="res" id="res" readonly style="width: 10vh;"></p>
+     </main>
+     <script type="text/javascript">
+          // Var
+          let res = document.getElementById('res');
+          let v1 = document.getElementById('v1');
+          let v2 = document.getElementById('v2');
+
+          function somar() {
+               // Pegando os valores e convertendo em Int
+               let soma = Number(v1.value) + Number(v2.value);
+               res.setAttribute('value', soma)
+          }
+
+          function subtrair() {
+               let diferenca = Number(v1.value) - Number(v2.value);
+               res.setAttribute('value', diferenca);
+          }
+
+          function multiplicar() {
+               let produto = Number(v1.value) * Number(v2.value);
+               res.setAttribute('value', produto);
+          }
+
+          function dividir() {
+               if (Number(v2.value) == 0) {
+                    res.setAttribute('value', "ERRO");
+               } else {
+                    let diferenca = Number(v1.value) / Number(v2.value);
+                    res.setAttribute('value', diferenca);
+               }
+          }
+
+          function calcular() {
+               if (document.getElementById('somar').checked) {
+                    somar();
+               } else if (document.getElementById('subtrair').checked) {
+                    subtrair();
+               } else if (document.getElementById('multiplicar').checked) {
+                    multiplicar();
+               } else if (document.getElementById('dividir').checked) {
+                    dividir();
+               }
+          }
+     </script>
+</body>
+
+</html>
