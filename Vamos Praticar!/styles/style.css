@@ -25,7 +25,7 @@ p.objective{
      font-weight: 560;
 }
 
-main, section.resposta{
+main, section#answer{
      background-color: var(--primaryColor);
      box-shadow: var(--boxShadow);
      border: 1px solid black;
@@ -36,7 +36,7 @@ main, section.resposta{
      height: fit-content;
 }
 
-section.resposta{
+section#answer{
      display: none;
 }
 
