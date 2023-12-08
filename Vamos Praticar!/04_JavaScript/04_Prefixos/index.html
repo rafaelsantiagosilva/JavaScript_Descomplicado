@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Prefixos</title>
+     <link rel="stylesheet" href="../../styles/style.css">
+     <style>
+          /* h1{
+               display: ;
+          } */
+     </style>
+</head>
+
+<body>
+     <header>
+          <h1 class="title">JavaScript</h1>
+          <p class="objective">Prefixos</p>
+     </header>
+
+     <main>
+          <div class="inputBox">
+               <label for="value">Digite o valor: </label>
+               <br>
+               <input type="text" id="value" name="value" placeholder="0.0">
+          </div>
+
+          <div class="inputBox">
+               <label for="prefixes">Selecione a unidade (byte): </label>
+               <br>
+               <select name="prefixes" id="prefixes">
+                    <option value="k">Kilo (K)</option>
+                    <option value="m">Mega (M)</option>
+                    <option value="g">Giga (G)</option>
+                    <option value="t">Tera (T)</option>
+               </select>
+          </div>
+
+          <div class="inputBox">
+               <button class="finish" onclick="calculate_others_prefixes()">Enviar</button>
+          </div>
+     </main>
+
+     <section id="answer">
+          <table>
+               <thead>
+                    <tr>
+                         <th span="col">Unidade (bytes):</th>
+                         <th span="col">Valor:</th>
+                    </tr>
+               </thead>
+
+               <tbody>
+                    <tr id="kilo" class="prefix">
+                         <td>Kilo (K)</td>
+                         <td id="kilo_value" class="table_value">0.0</td>
+                    </tr>
+
+                    <tr id="mega" class="prefix">
+                         <td>Mega (M)</td>
+                         <td id="mega_value" class="table_value">0.0</td>
+                    </tr>
+
+                    <tr id="giga" class="prefix">
+                         <td>Giga (G)</td>
+                         <td id="giga_value" class="table_value">0.0</td>
+                    </tr>
+
+                    <tr id="tera" class="prefix">
+                         <td>Tera (T)</td>
+                         <td id="tera_value" class="table_value">0.0</td>
+                    </tr>
+               </tbody>
+          </table>
+     </section>
+
+     <footer>
+          <p>&copy;Rafael Santiago</p>
+     </footer>
+
+     <script src="./script.js" type="text/javascript"></script>
+</body>
+
+</html>

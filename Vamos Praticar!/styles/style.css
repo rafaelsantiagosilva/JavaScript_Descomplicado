@@ -41,6 +41,29 @@ section#answer{
      display: none;
 }
 
+table{
+     border: 1px solid black;
+     border-collapse: collapse;
+     box-shadow: var(--boxShadow);
+     text-align: center;
+     width: 90vh;
+}
+
+tr{
+     width: 90vh;
+     border-radius: 5px;
+}
+
+tr, th, td{
+     border: 1px solid black;
+     padding: 0.5em;
+}
+
+th{
+     background-color: var(--successColor);
+     color: white;
+}
+
 .inputBox{
      margin: 0.5em;
 }
@@ -51,7 +74,7 @@ label{
      margin: 0.5em;
 }
 
-input{
+input, select, option{
      font-family: var(--inputFont);
      font-size: 0.9em;
      letter-spacing: 0.5px;
