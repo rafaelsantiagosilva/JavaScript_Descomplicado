@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Envio de Dados</title>
+</head>
+
+<body>
+     <h1>Envio de Dados</h1>
+     <label for="nome">Nome:</label>
+     <input type="text" name="nome" id="nome" size="20"><br>
+     <label for="email">Email:</label>
+     <input type="email" name="email" id="email" size="20"><br>
+     <input type="button" value="Enviar" onclick="gerarURL()">
+
+     <script type="text/javascript">
+          function gerarURL() {
+               let nome = document.getElementById('nome');
+               let email = document.getElementById('email');
+               
+               // Gerando a URL
+               window.location = `receber.html?nome=${nome.value}&email=${email.value}`;
+          }
+     </script>
+</body>
+
+</html>
