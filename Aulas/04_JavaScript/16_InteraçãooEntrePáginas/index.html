@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Intereção entre páginas</title>
+</head>
+
+<body>
+     <h1>Intereção entre páginas</h1>
+     <p>
+          <label for="valor">Digite um valor ou utilize a </label>
+          <input type="button" onclick="abrirCalc()" value="calculadora">:
+          <input type="text" name="valor" id="valor" value="0">
+     </p>
+     <script type="text/javascript">
+          var valor = document.getElementById('valor');
+
+          function abrirCalc() {
+
+               // O endereço da página, o title e outros atributos
+               window.open('../15_JavaScriptExterno/index.html', 'Calculadora', 'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=no. resizable=no, menubar=no, top=250, left=450, width=300, height=450');
+          }
+     </script>
+</body>
+
+</html>
