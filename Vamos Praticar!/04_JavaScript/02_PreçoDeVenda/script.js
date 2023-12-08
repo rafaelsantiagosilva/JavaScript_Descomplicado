@@ -29,6 +29,7 @@ function unit_price_verification() {
      return (!error);
 }
 
+// Verificando os dados da quantidade
 function quantity_verification() {
      let error = false;
 
@@ -53,6 +54,7 @@ function quantity_verification() {
      return (!error);
 }
 
+// Verificando os dados do desconto
 function discount_verification() {
      let error = false;
 
@@ -73,6 +75,7 @@ function discount_verification() {
      return (!error);
 }
 
+// Calculando o preço final
 function calculate_selling_price() {
      if (unit_price_verification() && quantity_verification() && discount_verification()) {
           final_price = Number(unit_price.value) * Number(quantity.value);
