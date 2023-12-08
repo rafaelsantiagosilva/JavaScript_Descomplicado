@@ -21,6 +21,7 @@ h1.title{
 p.objective{
      color: var(--secondaryColor);
      text-shadow: var(--textShadow);
+     font-size: 1.5em;
      text-align: center;
      font-weight: 560;
 }
@@ -45,14 +46,14 @@ section#answer{
 }
 
 label{
-     font-size: 0.8em;
+     font-size: 1em;
      font-family: var(--labelFont);
      margin: 0.5em;
 }
 
 input{
      font-family: var(--inputFont);
-     font-size: 0.7em;
+     font-size: 0.9em;
      letter-spacing: 0.5px;
      margin: 0.5em;
      padding: 0.2em;
@@ -60,6 +61,7 @@ input{
 
 button.finish{
      font-family: var(--inputFont);
+     font-size: 1em;
      background-color: var(--successColor);
      box-shadow: var(--buttonShadow);
      color: var(--primaryColor);
