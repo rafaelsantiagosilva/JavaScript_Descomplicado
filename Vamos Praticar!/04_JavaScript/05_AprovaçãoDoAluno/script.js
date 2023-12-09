@@ -3,6 +3,7 @@ let answer = document.getElementById("answer");
 let grade_1 = document.getElementById("grade_1");
 let grade_2 = document.getElementById("grade_2");
 
+// Verificando os dados da nota 1
 function grade_1_verification() {
   let error = false;
 
@@ -27,6 +28,7 @@ function grade_1_verification() {
   return !error;
 }
 
+// Verificando os dados da nota 2
 function grade_2_verification() {
   let error = false;
 
@@ -51,6 +53,7 @@ function grade_2_verification() {
   return !error;
 }
 
+// Definindo se o aluno está aprovado ou não
 function define_status(average) {
   if (average >= 6) {
     return "<span class='green'>APROVADO</span>";
@@ -59,6 +62,7 @@ function define_status(average) {
   }
 }
 
+// Calculando a média
 function calculate_grades_average() {
   if (grade_1_verification() && grade_2_verification()) {
     let average = (Number(grade_1.value) + Number(grade_2.value)) / 2;
