@@ -82,6 +82,10 @@ input, select, option{
      padding: 0.2em;
 }
 
+input[type='radio']{
+     cursor: pointer;
+}
+
 button.finish{
      font-family: var(--inputFont);
      font-size: 1em;
