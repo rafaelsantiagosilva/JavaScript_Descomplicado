@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seguradora de Veículos</title>
+    <link rel="stylesheet" href="../../styles/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="title">JavaScript</h1>
+      <p class="objective">Seguradora de Veículos</p>
+    </header>
+
+    <main>
+      <div class="inputBox">
+        <label for="name">Digite o seu nome: </label>
+        <br />
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="João da Silva"
+          size="25"
+          maxlength="30"
+        />
+      </div>
+
+      <div class="inputBox">
+        <label>Selecione o seu sexo: </label>
+        <br />
+        <label for="male">Masculino:</label>
+        <input type="radio" name="gender" id="male" value="m" />
+        <label for="female">Feminino:</label>
+        <input type="radio" name="gender" id="female" value="f" />
+      </div>
+
+      <div class="inputBox">
+        <label for="year_birth">Digite seu ano de nascimento: </label>
+        <br />
+        <input
+          type="text"
+          name="year_birth"
+          id="year_birth"
+          placeholder="1901-2000"
+        />
+      </div>
+
+      <div class="inputBox">
+        <label for="brand">Digite a marca de seu veículo: </label>
+        <br />
+        <input
+          type="text"
+          id="brand"
+          name="brand"
+          placeholder="Fiat"
+          size="25"
+          maxlength="30"
+        />
+      </div>
+
+      <div class="inputBox">
+        <label for="model">Digite o modelo de seu veículo: </label>
+        <br />
+        <input
+          type="text"
+          id="model"
+          name="model"
+          placeholder="SUV"
+          size="25"
+          maxlength="30"
+        />
+      </div>
+
+      <div class="inputBox">
+        <label for="year_fabrication"
+          >Digite o ano de fabricação de seu veículo:
+        </label>
+        <br />
+        <input
+          type="text"
+          name="year_fabrication"
+          id="year_fabrication"
+          placeholder="1901-2000"
+        />
+      </div>
+
+      <div class="inputBox">
+        <label for="vehicle_price">Digite o valor do veículo (R$): </label>
+        <br />
+        <input
+          type="text"
+          name="vehicle_price"
+          id="vehicle_price"
+          placeholder="00000.00"
+        />
+      </div>
+
+      <div class="inputBox">
+        <label for="bonus_percent">Digite a porcentagem de bônus (%): </label>
+        <br />
+        <input
+          type="text"
+          name="bonus_percent"
+          id="bonus_percent"
+          placeholder="0.00 - 25.00"
+        />
+      </div>
+
+      <div class="inputBox">
+        <button class="finish" onclick="calculate_policy()">Enviar</button>
+      </div>
+    </main>
+
+    <section id="answer"></section>
+
+    <footer>
+      <p>&copy;Rafael Santiago</p>
+    </footer>
+
+    <script src="./script.js" type="text/javascript"></script>
+  </body>
+</html>
