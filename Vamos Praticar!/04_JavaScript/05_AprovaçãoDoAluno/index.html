@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aprovação do Aluno</title>
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <style>
+          section.answer > span{
+               font-weight: bold;
+          }
+
+          span.red{
+               color: #9f1111;
+          }
+
+          span.green{
+               color: #0f990f;
+          }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="title">JavaScript</h1>
+      <p class="objective">Aprovação do Aluno</p>
+    </header>
+
+    <main>
+      <div class="inputBox">
+        <label for="grade_1">Digite a nota 1: </label>
+        <br />
+        <input type="text" id="grade_1" name="grade_1" placeholder="0.0" />
+      </div>
+
+      <div class="inputBox">
+        <label for="grade_2">Digite a nota 2: </label>
+        <br />
+        <input type="text" name="grade_2" id="grade_2" placeholder="0.0" />
+      </div>
+
+      <div class="inputBox">
+        <button class="finish" onclick="calculate_grades_average()">
+          Enviar
+        </button>
+      </div>
+    </main>
+
+    <section id="answer"></section>
+
+    <footer>
+      <p>&copy;Rafael Santiago</p>
+    </footer>
+
+    <script src="./script.js" type="text/javascript"></script>
+  </body>
+</html>
