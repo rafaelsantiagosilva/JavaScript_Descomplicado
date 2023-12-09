@@ -84,7 +84,7 @@ function calculate_geometric_shape() {
     if (geometric_shape.classList.length != 0) {
       geometric_shape.removeAttribute("class");
     }
-    geometric_shape.innerHTML = `<p>É um ${shape_name}</p>`;
+    geometric_shape.innerHTML = `<p>É um ${shape_name} de área igual a ${Number(width.value) * Number(height.value)}cm²</p>`;
     geometric_shape.classList.add(`${shape_class}`);
     answer.style.display = "block";
 
