@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maior de Três Números</title>
+    <link rel="stylesheet" href="../../styles/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="title">JavaScript</h1>
+      <p class="objective">Maior de Três Números</p>
+    </header>
+
+    <main>
+      <div class="inputBox">
+        <label for="number_1">Digite o 1ºnúmero: </label>
+        <br />
+        <input type="text" id="number_1" class="number" name="number_1" placeholder="0.0" />
+      </div>
+
+      <div class="inputBox">
+        <label for="number_2">Digite o 2ºnúmero: </label>
+        <br />
+        <input type="text" id="number_2" class="number" name="number_2" placeholder="0.0" />
+      </div>
+
+      <div class="inputBox">
+        <label for="number_3">Digite o 3ºnúmero: </label>
+        <br />
+        <input type="text" id="number_3" class="number" name="number_3" placeholder="0.0" />
+      </div>
+
+      <div class="inputBox">
+        <button class="finish" onclick="set_bigger()">Enviar</button>
+      </div>
+    </main>
+
+    <section id="answer"></section>
+
+    <footer>
+      <p>&copy;Rafael Santiago</p>
+    </footer>
+
+    <script src="./script.js" type="text/javascript"></script>
+  </body>
+</html>
