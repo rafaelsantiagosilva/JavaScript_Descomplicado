@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Retângulo ou Quadrado</title>
+    <link rel="stylesheet" href="../../styles/style.css" />
+    <style>
+      #geometric_shape {
+        border: 1px solid black;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1em;
+      }
+
+      .square {
+        width: 15em;
+        height: 15em;
+      }
+
+      .retangle_vertical {
+        width: 10em;
+        height: 15em;
+      }
+
+      .retangle_horizontal {
+        width: 15em;
+        height: 10em;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="title">JavaScript</h1>
+      <p class="objective">Retângulo ou Quadrado</p>
+    </header>
+
+    <main>
+      <div class="inputBox">
+        <label for="widht">Digite a largura: </label>
+        <br />
+        <input type="text" id="width" name="width" placeholder="0.0" />
+      </div>
+
+      <div class="inputBox">
+        <label for="height">Digite a altura: </label>
+        <br />
+        <input type="text" name="height" id="height" placeholder="0.0" />
+      </div>
+
+      <div class="inputBox">
+        <button class="finish" onclick="calculate_geometric_shape()">
+          Enviar
+        </button>
+      </div>
+    </main>
+
+    <section id="answer">
+      <div id="geometric_shape"></div>
+    </section>
+
+    <footer>
+      <p>&copy;Rafael Santiago</p>
+    </footer>
+
+    <script src="./script.js" type="text/javascript"></script>
+  </body>
+</html>
