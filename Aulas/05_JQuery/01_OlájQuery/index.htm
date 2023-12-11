@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Olá jQuery!</title>
+  </head>
+  <body>
+    <h1>Olá jQuery</h1>
+    <label for="nome">Qual é o seu nome?</label>
+    <input type="text" name="nome" id="nome" />
+    <br />
+    <input type="button" id="aqui" value="Clique aqui!" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      // $() para selecionar um elemento do HTML
+      // $(document).ready(função) -> Para esta função ser realizada assim que a página carregar
+      $(document).ready(function () {
+        $("#aqui").click(function () {
+          // $().val() para pegar o valor de um input
+          alert(`Olá ${$("#nome").val()}!`);
+        });
+      });
+    </script>
+  </body>
+</html>
