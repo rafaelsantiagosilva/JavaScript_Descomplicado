@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A ligeira raposa</title>
+  </head>
+  <body>
+    <h1>A ligeira raposa</h1>
+    <p>
+      A ligeira raposa marrom salta sobre o cão preguiçoso.
+      <input type="button" id="mais" value="Mais informações" />
+     <div id="info"></div>
+     </p>
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+     <script type="text/javascript">
+          // Este script pega o texto de um txt e exibe no html
+          $(document).ready(() => {
+            $("#mais").click(() => {
+              $.ajax({url: "conteudo.txt", success: (resultado) => {
+               $('#info').html(resultado);
+              }});
+            });
+          });
+     </script>
+</body>
+</html>
