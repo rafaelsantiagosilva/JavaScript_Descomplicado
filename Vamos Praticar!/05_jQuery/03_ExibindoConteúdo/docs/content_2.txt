@@ -1,0 +1,9 @@
+<p>
+     O backend é a parte de uma aplicação web que não é vista pelo usuário. É o que ocorre “por debaixo dos panos” em seu website. 
+     Ele é responsável por dar suporte às ações do usuário, fornecendo estrutura e apoio às aplicações desenvolvidas na programação. 
+     O desenvolvimento back-end é tudo aquilo que possibilita o funcionamento de um site, como bancos de dados, servidores, segurança 
+     de dados, gerenciamento de conteúdo, estrutura, etc. 
+
+     O desenvolvimento back-end está sempre presente em operações feitas através de um computador, desde as mais simples até as mais 
+     complexas.
+</p>
