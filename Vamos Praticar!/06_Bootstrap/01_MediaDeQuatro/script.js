@@ -23,6 +23,6 @@ function calculate_average() {
 			soma += Number($(`#inp_num${i}`).val());
 		}
 		soma /= 4;
-		$("#total").html(soma);
+		$("#total").text(soma);
 	}
 }
